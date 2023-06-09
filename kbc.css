@@ -1,0 +1,442 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    overflow: hidden;
+}
+
+.user-interact{
+    height: 100vh;
+    width: 100%;
+    background: radial-gradient(#ab81da,#291041);
+    display: flex;
+    position: absolute;
+    top: 0px;
+    
+}
+
+.user-interact>button{
+    margin: auto;
+    width: 300px;
+    height: 100px;
+    font-size: 3.7rem;
+    background: radial-gradient(#5c288b,#2b0a49);
+    color: white;
+    border-radius: 5rem;
+    border: 5px solid #ffbf00;
+}
+
+
+.user-interact>button:hover{
+    cursor: pointer;
+}
+/* Open page Css */
+
+.open-page{
+    height: 100vh;
+    width: 100%;
+    background: radial-gradient(#ab81da,#291041);
+    position: absolute;
+    top: 1000px;
+   
+}
+
+.center-div{
+    margin: auto;
+    position: relative;
+    display: table;
+    align-items: center;
+    top: 13vh;
+}
+
+.logo>img{
+    display: table;
+    margin: auto;
+    height: 200px;
+    width: 200px;
+    animation: rotateImg 8.5s ease-out;
+}
+
+@keyframes rotateImg {
+    from {
+      transform: rotate(100000deg);
+    }
+    to {
+      transform: rotate(0deg);
+    }
+  }
+
+.level-selecter{
+    width: 320px;
+}
+
+.levels{
+    text-align: center;
+    font-size: 1.8rem;
+    padding: 10px 0px;
+    margin: 35px 0px;
+    cursor: pointer;
+    clip-path: polygon(1% 50%,15% 15%,85% 15%,99% 50%,85% 85%,15% 85%);
+    
+    background: radial-gradient(#5c288b,#2b0a49);
+    color: white;
+    
+}
+
+.border-for-difficulty-selector{
+    background-color: #ffc800;
+    clip-path: polygon(0% 50%,15% 10%,85% 10%,100% 50%,85% 90%,15% 90%);
+}
+
+.levels:hover{
+    color: #ffd261;
+    /* font-weight: 600; */
+    letter-spacing: 2px;
+    
+}
+
+.rules{
+    background: #421e64;
+    color: white;
+    width: 320px;
+    padding: 20px 20px;
+    position: absolute;
+    top: 26.5vh;
+    height: 320px;
+    border-radius: 0px;
+    border: 4px solid #ffd261;
+    
+    
+}
+
+.language{
+    display: flex;
+    justify-content: space-around;
+}
+
+.language>button,.rules>button{
+    width: 100px;
+    margin: 5px 0px ;
+    border-radius: 20px;
+    background-color: #bf7ddb;
+    padding: 2px;
+    cursor: pointer;
+}
+
+.rules-in-language{
+    margin-top: 25px;
+}
+
+#start{
+    float: right;
+    margin-top: 10px;
+}
+
+
+
+/* Open Page CSS over */
+/* Game Page CSS Starts */
+
+
+.game-page{
+    background: url("./Requires/hot-seat.jpg");
+    
+    position: absolute;
+    top: 1000px;
+    height: 100vh;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    
+}
+
+#bacchan{
+    position: absolute  ;
+  /* border: 2px solid yellow; */
+  /* top: 0; */
+  right: 0;
+  left: 0;
+  /* bottom: 0; */
+  margin: auto;
+  padding: 40px 10px;
+  height: 400px;
+}
+
+#bacchan>img{
+    height: 300px;
+    width: 300px;
+    display: table;
+    margin: auto;
+}
+
+#next,#check,#nextquestion{
+    display: table;
+margin: auto;
+    font-size: 1rem;
+    background: radial-gradient(#5c288b,#2b0a49);
+    color: white;
+    border-radius: 3rem;
+    padding: 2px 10px;
+    border: 2px solid #ffbf00;
+    margin-top: 10px;
+    height: 40px;
+    width: 100px;
+    margin-bottom: 30px;
+}
+
+#check,#nextquestion{
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    bottom: 20px;
+    width: 150px;
+    height: 40px;
+    font-size: 1rem;
+    display: none;
+   
+}
+
+#next:hover,#check:hover,#nextquestion:hover{
+    cursor: pointer;
+    background:#ffca2d;
+    color: black;
+    font-weight: 600;
+}
+
+#points{
+    height: 290px;
+    background: radial-gradient(#242ea1,#02005b);
+    text-align: center;
+    color: #ffbf00;
+    font-size: 9rem;
+    padding-top: 25px;
+    display: none;
+    border: 4px solid #ffbf00;
+    clip-path: polygon(10% 50%,15% 15%,85% 15%,90% 50%,85% 85%,15% 85%);
+
+}
+
+.pointsborder{
+    background: #ffbf00;
+    clip-path: polygon(9% 50%,15% 12%,85% 12%,91% 50%,85% 88%,15% 88%);
+}
+
+.question{
+    
+    background: radial-gradient(#242ea1,#02005b);
+    color: white;
+    font-size: 1.2rem;
+    padding: 25px 250px;
+    width: 100%;
+    letter-spacing: 0.1px;
+    clip-path: polygon(10% 50%,15% 15%,85% 15%,90% 50%,85% 85%,15% 85%);
+}
+
+.question-border{
+    
+    clip-path: polygon(9% 50%,15% 10%,85% 10%,91% 50%,85% 90%,15% 90%);
+    background-color:#ffca2d;
+    margin: auto;
+    position: relative;
+    top: 63vh;
+    
+}
+
+.option-box{
+    /* background-color: #2b0a49; */
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    top: 65vh;
+    padding: 0px 150px;
+   
+}
+
+.options{
+    color: white;
+    padding: 20px 100px;
+    clip-path: polygon(10% 50%,15% 15%,85% 15%,90% 50%,85% 85%,15% 85%);
+    background: radial-gradient(#242ea1,#02005b);
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.options:hover{
+    
+    cursor: pointer;
+}
+
+.option-border{
+    flex-basis: 50%;
+    background-color:#ffca2d;
+    clip-path: polygon(9% 50%,15% 11%,85% 11%,91% 50%,85% 89%,15% 89%);
+
+}
+
+
+@media (max-width:1404px){
+    #points{
+        font-size: 8.9rem;
+        padding-top: 50px;
+    }
+}
+
+
+@media (max-width:1230px){
+    .question{
+        padding: 25px 200px;
+    }
+
+    
+}
+
+@media (max-width:1050px){
+    .question{
+        padding: 25px 160px;
+    }
+
+    .options{
+        padding: 20px 70px;
+    }
+
+    #points{
+        font-size: 5.4rem;
+        padding-top: 75px;
+    }
+}
+
+@media (max-width:900px){
+    .question{
+        padding: 25px 160px;
+    }
+
+    .options{
+        padding: 20px 50px;
+    }
+}
+
+@media (max-width:817px){
+    .question{
+        padding: 25px 160px;
+        margin-top: 10px;
+    }
+
+    .options{
+        padding: 20px 100px;
+        
+    }
+    .option-border{
+        flex-basis: 100%;
+    
+    }
+
+    .option-box{
+        top: 45vh;
+
+    }
+
+    .question-border{
+        top:45vh
+    }
+
+    .option-box{
+        padding: 0px 45px;
+    }
+
+    #bacchan{
+        height: 300px;
+    }
+
+    #bacchan>img{
+        height: 200px;
+        width: 200px;
+    }
+
+    #points{
+        font-size: 3.85rem;
+        padding-top: 90px;
+    }
+}
+
+@media (max-width:730px){
+    .question{
+        padding: 25px 100px;
+    }
+
+    .options{
+        padding: 20px 100px;
+        
+    }
+}
+
+@media (max-width:730px){
+    .question{
+        font-size: 0.9rem;
+    }
+
+    .options{
+        font-size: 0.9rem;
+        
+    }
+}
+
+@media (max-width:600px){
+    .options{
+        padding: 20px 70px;
+    }
+
+    .question-border{
+        clip-path: polygon(0% 50%,15% 10%,85% 10%,100% 50%,85% 90%,15% 90%);
+    }
+
+    .question{
+        clip-path: polygon(2% 50%,15% 15%,85% 15%,98% 50%,85% 85%,15% 85%);
+        padding: 25px 80px;
+    }
+
+    #points{
+        font-size: 3.3rem;
+        padding-top: 110px;
+    }
+}
+
+@media (max-width:500px){
+
+    .options{
+        padding: 16px 70px;
+    }
+    .question{
+        font-size: 0.7rem;
+    }
+
+    .options{
+        font-size: 0.7rem;
+        
+    }
+
+    #points{
+        font-size: 1.8rem;
+        padding-top: 49px;
+        height: 150px;
+    }
+}
+
+@media (max-width:450px){
+    .question{
+        
+        padding: 15px 60px;
+    }
+
+    .option-box{
+        padding: 0px 20px;
+    }
+    
+
+
+}
+

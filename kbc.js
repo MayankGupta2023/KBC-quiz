@@ -828,17 +828,17 @@ document.getElementById("check").addEventListener("click", () => {
                 document.getElementById("D").style.background = "radial-gradient(#f55959, #b80101)"
                 document.getElementById("D").style.color = "white"
 
-                if (play_question[question_number].options[4].Correct == gabru_question[question_number].options[1].B) {
+                if (play_question[question_number].options[4].Correct == play_question[question_number].options[1].B) {
                     document.getElementById("B").style.background = "radial-gradient(#3c811c,#3e7920)"
                     document.getElementById("B").style.color = "white"
                 }
 
-                if (play_question[question_number].options[4].Correct == gabru_question[question_number].options[2].C) {
+                if (play_question[question_number].options[4].Correct == play_question[question_number].options[2].C) {
                     document.getElementById("C").style.background = "radial-gradient(#3c811c,#3e7920)"
                     document.getElementById("C").style.color = "white"
                 }
 
-                if (play_question[question_number].options[4].Correct == gabru_question[question_number].options[0].A) {
+                if (play_question[question_number].options[4].Correct == play_question[question_number].options[0].A) {
                     document.getElementById("A").style.background = "radial-gradient(#3c811c,#3e7920)"
                     document.getElementById("A").style.color = "white"
                 }
